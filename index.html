@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Escolha seu filme</title>
+</head>
+<body>
+    <main>
+        <!-- Passo 0: Escolha inicial -->
+        <div class="passo ativo" id="passo-0">
+            <img src="img/sala-natal.png" alt="Sala de Natal aconchegante">
+            <p>Hoje você tem duas ótimas opções para assistir. Qual filme você gostaria de ver?</p>
+            <button class="btn-proximo" data-proximo="1">Uma Quedinha de Natal</button>
+            <button class="btn-proximo" data-proximo="2">Nosso Segredinho</button>
+        </div>
+
+        <!-- Passo 1: Uma Quedinha de Natal -->
+        <div class="passo" id="passo-1">
+            <img src="img/cabana-natal.png" alt="Cabana aconchegante na neve">
+            <p>Você escolheu assistir "Uma Quedinha de Natal".</p>
+        </div>
+
+        <!-- Passo 2: Nosso Segredinho -->
+        <div class="passo" id="passo-2">
+            <img src="img/mercado-natal.png" alt="Mercado de Natal iluminado">
+            <p>Você escolheu assistir "Nosso Segredinho".</p>
+        </div>
+    </main>
+
+    <script>
+        const avanca = document.querySelectorAll('.btn-proximo');
+
+        avanca.forEach(button => {
+            button.addEventListener('click', function () {
+                const atual = document.querySelector('.ativo');
+                const proximoPasso = 'passo-' + this.getAttribute('data-proximo');
+
+                atual.classList.remove('ativo');
+                document.getElementById(proximoPasso).classList.add('ativo');
+            });
+        });
+    </script>
+</body>
+</html>

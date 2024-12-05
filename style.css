@@ -1,0 +1,74 @@
+/* Estilo geral */
+body {
+    background-color: #2C2F33; /* Tom aconchegante e escuro */
+    color: #FDF6E3; /* Cor clara e suave para o texto */
+    font-family: "Bai Jamjuree", sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    background-image: url('https://www.transparenttextures.com/patterns/gray-floral.png'); /* Textura sutil */
+    background-size: cover;
+}
+
+/* Botões */
+button {
+    background-color: #B22222; /* Vermelho natalino */
+    color: white;
+    font-family: "Bai Jamjuree", sans-serif;
+    font-size: 16px;
+    padding: 10px 20px;
+    margin: 10px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #8B0000; /* Tom mais escuro ao passar o mouse */
+}
+
+/* Passos (etapas do jogo) */
+.passo {
+    display: none;
+    background-color: rgba(0, 0, 0, 0.8); /* Fundo semi-transparente para contraste */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.5); /* Sombra para destacar */
+}
+
+.passo.ativo {
+    display: block;
+}
+
+/* Centralização do conteúdo */
+main {
+    text-align: center;
+    max-width: 600px;
+    padding: 20px;
+}
+
+/* Imagens */
+img {
+    max-width: 90%;
+    border-radius: 10px; /* Cantos arredondados para suavizar */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.7); /* Sombra para destacar as imagens */
+}
+
+/* Animação para transições suaves */
+button, .passo {
+    animation: fadeIn 1s ease;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
